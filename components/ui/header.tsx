@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import MobileMenu from './mobile-menu'
+import { ThemeToggle } from '../toggle-theme'
 
 export default function Header() {
   return (
@@ -19,7 +20,7 @@ export default function Header() {
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
             {/* Desktop sign in links */}
-            <ul className="flex grow justify-end flex-wrap items-center">
+            <ul className="flex grow justify-end gap-x-4 flex-wrap items-center">
               <li>
                 <Link
                   href="/signin"
@@ -33,6 +34,7 @@ export default function Header() {
                   Sign up
                 </Link>
               </li>
+              <ThemeToggle />
             </ul>
           </nav>
 
